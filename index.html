@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz para mi chanchita</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdfdfd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .quiz-container {
+            background: #e069f879;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+        .question {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .option {
+            display: block;
+            background: #e3e3e3;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .option:hover {
+            background: #d1d1d1;
+        }
+        .correct {
+            background-color: #a8e6a8;
+        }
+        .incorrect {
+            background-color: #f7a8a8;
+        }
+        .hidden {
+            display: none;
+        }
+        .result {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .final-message {
+            font-size: 22px;
+            color: #4CAF50;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h2>Quiz para mi chanchita</h2>
+        <div id="question-container">
+            <div class="question" id="question">¿Cuándo fue que nos vimos por primera vez en persona?</div>
+            <div class="option" onclick="selectOption(this, 0)">El 5 de agosto</div>
+            <div class="option" onclick="selectOption(this, 1)">El 20 de abril</div>
+            <div class="option" onclick="selectOption(this, 2)">El 10 de cada mes</div>
+            <div class="option" onclick="selectOption(this, 3)">Ninguna de las anteriores</div>
+        </div>
+        <div class="result hidden" id="result-container"></div>
+        <button class="hidden" id="next-btn" onclick="loadNextQuestion()">Siguiente Pregunta</button>
+        <div class="final-message hidden" id="final-message">
+            Has respondido todo chanchita,Desde el primer momento en que nuestras miradas se cruzaron senti cosas que nunca habia sentido con alguien, no solo fue la grandes emociones , si no el porfin estar juntos, eres la pasajera mas especial en mi corazon quiero que todos los dias veas como cada momento contigo lo e recordado contigo, recuerdo c ada conversacion y cada risa que compartimos cada pequello detalle que tuvimos juntos, tu precensia ha sido la luz que ilumina mi vida incluso en mis dias mas grises, admiro la fuerza con la que enfrentas muchas veces la vida, la ternura con la que me tratas y esa manera tan especial de ser solamente tu , tu tienes la llave en mi corazon , tu me haces atesorar la vida , quiero que sepas que eres mucho mas que una simple compañia en mi vida , eres una insipiracion, mi paz y la razon por la cual cada dia busco ser mejor, deseo todos los dias que salgamos adelante y creciendo ojala poder construir una historia hermosa contigo , gracias por ser autentica y especial en mi vida gracias por hacerme parte de tu vida que no se te olvide yo siempre sere tuyo. 💖
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
